@@ -1,0 +1,153 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    
+    <title>CompuNerds</title>
+    <link rel="icon" src="images/demo/featured-slide/cn.png" />
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<link rel="stylesheet" href="layout/styles/layout.css" type="text/css" />
+<script type="text/javascript" src="layout/scripts/jquery.min.js"></script>
+<!-- liteAccordion is Homepage Only -->
+<link rel="stylesheet" href="layout/scripts/liteaccordion-v2.2/css/liteaccordion.css" type="text/css" />
+    <style type="text/css">
+        .auto-style1 {
+            width: 960px;
+            height: 481px;
+            border-style: solid;
+            border-width: 12px;
+        }
+        .auto-style2 {
+            width: 454px;
+        }
+        .auto-style3 {
+            width: 348px;
+        }
+    </style>
+    
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body id="top">
+    
+        
+   <div class="wrapper row1">
+  <div id="header" class="clear">
+    <div class="fl_left">
+      <h1><a href="index.html">CompuNerds</a></h1>
+      <p>C.S.-I.T. GITM</p>
+    </div>
+     <form action="#" method="post" id="login">
+      <div>
+          <img src="images/demo/featured-slide/logo.png" alt="" width="170" height="100" />
+      </div>
+      
+      </form>
+    </div>
+</div>
+<!-- ####################################################################################################### -->
+<div class="wrapper row2">
+  <div id="topnav">
+    <ul>
+      <li ><a href="Index.aspx">Home</a></li>
+      <li ><a href="gallery.aspx">Gallery</a></li>
+      <li><a href="UserRegistrationAdmin.aspx">User Registration</a></li>
+      <li><a href="#">Events</a>
+          <ul>
+              <li><a href="OrgEvents.aspx">Organised Events</a></li>
+              <li><a href="UpcEvents.aspx">Upcoming Events</a></li>
+          </ul>
+         </li>
+      <li><a href="CntctUs.aspx">Contact Us</a></li>
+      
+    </ul>
+    <div  class="clear"></div>
+  </div>
+</div>
+   <form id="form1" runat="server">
+     <div>
+
+        <table align="center" class="auto-style1" bgcolor="#6666FF" >
+            <tr>
+                <td class="auto-style3">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+                <td class="auto-style2">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+                <td class="auto-style2">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder5" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+            <tr>
+                <td class="auto-style3">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder3" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+                <td class="auto-style2">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder4" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+                <td class="auto-style2">
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder6" runat="server">
+                    </asp:ContentPlaceHolder>
+                </td>
+            </tr>
+        </table>
+
+    </div>
+        </form>
+         
+<div class="wrapper row5">
+  <div id="footer" class="clear"> 
+    <!-- ####################################################################################################### -->
+    <div class="foot_contact">
+      <h2>College :</h2>
+      <address>
+      Near Indira Canal, Faizabad Road, Lucknow, Uttar Pradesh 226028
+
+      </address>
+      <ul>
+        <li><strong>Tel:</strong> 0522 656 8698</li>
+        
+        <li class="last"><strong>Email:</strong> <a href="#">sudeep71195@gmail.com</a></li>
+      </ul>
+    </div>
+    
+    
+    
+    <!-- ####################################################################################################### --> 
+  </div>
+</div>
+<div class="wrapper">
+  <div id="copyright" class="clear">
+    <p class="fl_left">Copyright &copy; 2015 - All Rights Reserved - <a href="Home.aspx" title="Website Developer">sudeepO7</a></p>
+    <p class="fl_right">Website by <a target="_blank" href="Home.aspx" title="Website Developer">SUDEEP MUKHERJEE</a></p>
+  </div>
+</div>
+<!-- liteAccordion is Homepage Only --> 
+<script type="text/javascript" src="layout/scripts/liteaccordion-v2.2/js/liteaccordion.jquery.min.js"></script> 
+<script type="text/javascript">
+    $("#featured_slide").liteAccordion({
+        theme: "os-tpl",
+        containerWidth: 960, // fixed (px)
+        containerHeight: 360, // fixed (px) - overall height of the slider
+        headerWidth: 48, // fixed (px) - slide spine title
+        firstSlide: 1, // displays slide (n) on page load
+        activateOn: "click", // click or mouseover
+        autoPlay: false, // automatically cycle through slides
+        pauseOnHover: true, // pause slides on hover
+        rounded: false, // square or rounded corners
+        enumerateSlides: true, // put numbers on slides
+        slideSpeed: 800, // slide animation speed
+        cycleSpeed: 6000, // time between slide cycles
+    });
+</script>
+   
+</body>
+</html>
